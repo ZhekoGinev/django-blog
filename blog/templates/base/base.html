@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,16 +20,18 @@
     ></script>
     <!-- Google fonts -->
 
+    <!-- Base CSS-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base/base-style.css'%}">
     <!-- Custom CSS -->
-    {% block css %} {% endblock %}
+    {% block custom_css %}{% endblock %}
   </head>
 
   <body>
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="">Brand name / icon here</a>
       <button
-        class="navbar-toggler"
+        class="navbar-toggler mx-auto"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent"
@@ -41,16 +42,16 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2">
+        <ul class="navbar-nav mx-auto">
+          <a class="navbar-brand" href="">Blog</a>
           <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
         </ul>
       </div>
     </nav>
+    <main>{% block main %}main content{% endblock %}</main>
 
-    <main>main content</main>
-
-    <footer>footer</footer>
+    <footer>{% block footer %}footer{% endblock %}</footer>
   </body>
 </html>
