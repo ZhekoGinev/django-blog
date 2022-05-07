@@ -1,0 +1,24 @@
+header {
+    margin: 50px;
+}
+
+.article {
+    box-shadow: 0 0 1px;
+}
+
+.article p {
+    width: auto;
+}
+
+.article a {
+    text-decoration: none;
+    color: black;
+}
+
+.newest-article h2 {
+    margin: 50px auto;
+}
+
+.thumb {
+    margin-top:20px
+}

@@ -1,18 +1,32 @@
 {% extends 'base/base.html' %}
-
 {% load static %}
-
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'mainpage/styles.css' %}" />
+{% endblock %}
 {% block main %}
 <header>
-    <h1>Welcome message</h1>
-    <p>Short description</p>
+  <h1>Welcome to the blog</h1>
+  <p>simple, clean and responsive design</p>
 </header>
-<section>
-    Top articles
+
+<section class="newest-article">
+  <h2>Newest articles</h2>
+  <div class="container">
+    <div class="row">
+      {% for article in latest %}
+      <div class="col-lg-4 article">
+        <img class="thumb" src="{{ article.image.url }}" height="150px" />
+        <h2><a href="{% url 'details' article.slug %}">{{ article.title }}</a></h2>
+        <p>{{ article.created_on }}
+        <p>{{ article.snippet }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>
 
-<section>
-    Newest
+<section class="top-articles">
+  <h2>Top picks</h2>
 </section>
 
 {% endblock %}

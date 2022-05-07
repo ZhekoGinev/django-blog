@@ -9,3 +9,8 @@ body {
 .navbar-brand {
     position: absolute;
 }
+
+.article a {
+    text-decoration: none;
+    color: black;
+}

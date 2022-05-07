@@ -3,7 +3,8 @@ from .models import Article
 
 # Create your views here.
 def index(request):
-    return render(request, "mainpage/index.html")
+    latest = Article.objects.all().order_by('-created_on')[0:3]
+    return render(request, "mainpage/index.html", {'latest' : latest})
 
 
 def about(request):
