@@ -6,11 +6,11 @@
 {% for article in articles %}
 <div class="container article">
   <div style="margin-top: 25px; margin-bottom: 25px;">
-    <h2><a href="{% url 'details' article.slug %}">{{ article.title }}</a></h2>
+    <h3><a href="{% url 'details' article.slug %}">{{ article.title }}</a></h3>
     <p>{{ article.snippet }}</p>
     <p>{{ article.created_on }}</p>
   </div>
 </div>
-<hr style="width: 50%; margin: auto" />
+<hr style="margin: auto; height: 0" />
 
 {% endfor %} {% endblock %}

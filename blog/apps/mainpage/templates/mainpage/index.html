@@ -16,7 +16,7 @@
       {% for article in latest %}
       <div class="col-lg-4 article">
         <img class="thumb" src="{{ article.image.url }}" height="150px" />
-        <h2><a href="{% url 'details' article.slug %}">{{ article.title }}</a></h2>
+        <h3 style="margin: 25px !important;"><a href="{% url 'details' article.slug %}">{{ article.title }}</a></h3>
         <p>{{ article.created_on }}
         <p>{{ article.snippet }}</p>
       </div>
@@ -24,9 +24,4 @@
     </div>
   </div>
 </section>
-
-<section class="top-articles">
-  <h2>Top picks</h2>
-</section>
-
 {% endblock %}
