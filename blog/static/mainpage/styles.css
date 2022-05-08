@@ -4,6 +4,7 @@ header {
 
 .article {
     box-shadow: 0 0 1px;
+    max-width: 600px;
 }
 
 .article p {
@@ -15,6 +16,20 @@ header {
     color: black;
 }
 
+.article a:hover {
+    text-decoration: underline;
+}
+
 .thumb {
-    margin-top:20px
+    margin-top:20px;
+    height: 150px;
+}
+
+.article-list-item {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.article-detail {
+    margin-top: 50px;
 }

@@ -20,12 +20,13 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'base/base-style.css'%}" />
     <!-- Custom CSS -->
-    {% block custom_css %}{% endblock %}
+    {% block custom_css %}
+    {% endblock %}
   </head>
 
   <body>
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-custom">
       <!--  -->
       <a class="navbar-brand" href="#"
         ><img src="{% static 'media/dj_sm_50.png' %}" />Brand</a

@@ -1,10 +1,11 @@
 from django.shortcuts import render, HttpResponse
 from .models import Article
 
+
 # Create your views here.
 def index(request):
     latest = Article.objects.all().order_by('-created_on')[0:3]
-    return render(request, "mainpage/index.html", {'latest' : latest})
+    return render(request, "mainpage/index.html", {'latest': latest})
 
 
 def about(request):
@@ -13,7 +14,7 @@ def about(request):
 
 def articles(request):
     articles = Article.objects.all().order_by('-created_on')
-    return render(request, "articles.html", {'articles' : articles})
+    return render(request, "articles.html", {'articles': articles})
 
 
 def contact(request):

@@ -15,7 +15,7 @@
     <div class="row">
       {% for article in latest %}
       <div class="col-lg-4 article">
-        <img class="thumb" src="{{ article.image.url }}" height="150px" />
+        <img class="thumb" src="{{ article.image.url }}" />
         <h3 style="margin: 25px !important;"><a href="{% url 'details' article.slug %}">{{ article.title }}</a></h3>
         <p>{{ article.created_on }}
         <p>{{ article.snippet }}</p>

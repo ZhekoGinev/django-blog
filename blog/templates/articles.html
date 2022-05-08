@@ -1,16 +1,19 @@
-{% extends 'base/base.html' %} {% load static %} {% block custom_css %}
+{% extends 'base/base.html' %}
+{% load static %}
+{% block custom_css %}
 <link rel="stylesheet" href="{% static 'mainpage/styles.css' %}" />
-{% endblock %}{% block main %}
+{% endblock %}
+{% block main %}
 <h2>List of articles:</h2>
 <br />
 {% for article in articles %}
 <div class="container article">
-  <div style="margin-top: 25px; margin-bottom: 25px;">
+  <div class="article-list-item">
     <h3><a href="{% url 'details' article.slug %}">{{ article.title }}</a></h3>
     <p>{{ article.snippet }}</p>
     <p>{{ article.created_on }}</p>
   </div>
 </div>
 <hr style="margin: auto; height: 0" />
-
-{% endfor %} {% endblock %}
+{% endfor %}
+{% endblock %}
