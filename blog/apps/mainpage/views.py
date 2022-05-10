@@ -17,10 +17,6 @@ def articles(request):
     return render(request, "articles.html", {'articles': articles})
 
 
-def contact(request):
-    return render(request, "contact.html")
-
-
 def article_details(request, slug):
     context = Article.objects.get(slug=slug)
     return render(request, 'article-details.html', {'context': context})
