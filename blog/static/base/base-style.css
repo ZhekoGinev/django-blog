@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    background-color: #fdf5e6;
 }
 
 .nav-link {
@@ -12,4 +13,9 @@ body {
 
 .nav-custom {
     background-color: #002f34;
+}
+
+.date {
+    font-weight: lighter;
+    font-size: 0.8rem;
 }

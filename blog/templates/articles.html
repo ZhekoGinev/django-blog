@@ -11,7 +11,7 @@
   <div class="article-list-item">
     <h3><a href="{% url 'details' article.slug %}">{{ article.title }}</a></h3>
     <p>{{ article.snippet }}</p>
-    <p>{{ article.created_on }}</p>
+    <p class="date">{{ article.created_on }}</p>
   </div>
 </div>
 <hr style="margin: auto; height: 0" />

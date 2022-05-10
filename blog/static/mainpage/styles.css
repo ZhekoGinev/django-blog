@@ -26,8 +26,8 @@ header {
 }
 
 .article-list-item {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .article-detail {
