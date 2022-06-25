@@ -1,4 +1,7 @@
 # Description:
+
+### !Still work in progress
+
 This is a simple blog project built with fullstack django.<br>
 The main purpose is to practice django development and concepts.<br>
 It's intended for a single author using the django admin portal.<br>
